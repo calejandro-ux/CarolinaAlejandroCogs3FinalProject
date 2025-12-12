@@ -68,8 +68,10 @@ body {
         align-items: flex-start; 
         gap: 90px;
         margin-top: 40px; 
-        max-width:900px; 
-        font-family: "Zalando Sans Expanded", sans-serif; } 
+        max-width:1100px; 
+        font-family: "Zalando Sans Expanded", sans-serif; 
+      padding-left: 200px;     /* <-- makes it more inward */
+  padding-right: 60px;    } 
         
         .description-row p { 
           max-width: 600px; 
@@ -79,7 +81,7 @@ body {
            text-align: left; 
            margin: 0;  } 
            
-           .resume-link { 
+.resume-link { 
             display: inline-block; 
             background-color: #5d2912;
              color: #ffffff; 
@@ -92,7 +94,7 @@ body {
              margin: 0;
               align-self: flex-start; } 
               
-              .resume-link:hover { background-color: #905a40; } 
+.resume-link:hover { background-color: #905a40; } 
               .resume-row { 
                 display: flex;
                  justify-content: space-between; 
@@ -239,3 +241,15 @@ body {
                                                                       .text-box { text-align: center; } } 
                                                                       
                                                                       img { max-width: 100%; height: auto; }
+
+                                                                      /* keep the button from shrinking */
+.resume-link{
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* let the paragraph be the flexible one */
+.description-row p{
+  flex: 1;
+  min-width: 0;
+}
